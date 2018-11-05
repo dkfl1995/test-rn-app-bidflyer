@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     },
     priceContainer: {
         borderWidth: 1,
-        borderRadius: 10,]
+        borderRadius: 10,
         padding: 20,
         margin: 10,
         backgroundColor: 'aqua'
