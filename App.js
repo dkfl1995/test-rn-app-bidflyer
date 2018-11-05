@@ -7,20 +7,19 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Button, 
+  Dimensions} from 'react-native';
+import {Icon} from 'react-native-elements';
 
-const instructions = `Welcome to ${Platform.OS.toLocaleLowerCase()} BidFlyer test app`
+import Feed from './src/Feed';
+const { width, height } = Dimensions.get('screen');
+const instructions = `Welcome to ${Platform.OS.toLocaleLowerCase()} BidFlyer test app`;
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
+    return [
+        <Feed />
+    ];
   }
 }
 
@@ -41,4 +40,16 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  buttonContainer: {
+    minWidth: 100,
+    backgroundColor: 'gray',
+  }
 });
+
+
+
+
+
+
+
+
